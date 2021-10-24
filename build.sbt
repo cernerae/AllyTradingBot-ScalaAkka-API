@@ -23,7 +23,12 @@ scalacOptions := Seq("-deprecation", "-unchecked", "-feature")
 
 libraryDependencies ++= Seq(
 
-  "com.typesafe" % "config" % props.value("typesafe-config")
+  "com.typesafe" % "config" % props.value("typesafe-config"),
+
+  "com.typesafe.akka" %% "akka-actor-typed" % props.value("akka.version"),
+  "com.typesafe.akka" %% "akka-stream" % props.value("akka.version"),
+  "com.typesafe.akka" %% "akka-http" % props.value("akkaHttp.version"),
+  "com.typesafe.akka" %% "akka-http-spray-json" % props.value("akkaHttp.version")
 
 )
 
